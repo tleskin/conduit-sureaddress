@@ -32,7 +32,7 @@ module Conduit::Driver::Sureaddress
       if host_override?
         @options[:host_override] + url_route
       else
-        Conduit::Reactor::Configuration.api_host + url_route
+        Conduit::Sureaddress::Configuration.api_host + url_route
       end
     end
 
@@ -85,11 +85,16 @@ module Conduit::Driver::Sureaddress
     end
 
     def mock_mode?
-      @options.key?(:mock_status) && (!@options[:mock_status].empty? && !@options[:mock_status].nil?)
+      option_key_present?(:mock_status)
     end
 
     def host_override?
-      @options.key?(:host_override) && (!@options[:host_override].empty? && !@options[:host_override].nil?)
+      option_key_present?(:host_override)
+    end
+
+    def option_key_present?(key)
+      option_value = @options[key]
+      !(option_value.nil? || option_value.empty?)
     end
   end
 end
