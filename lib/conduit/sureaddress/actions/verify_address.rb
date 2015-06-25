@@ -8,5 +8,10 @@ module Conduit::Driver::Sureaddress
                         :secondary_address_line, :urbanization, :city, :county,
                         :state, :zip_code, :zip_plus_4, :business_unit
     http_method :post
+
+    def initialize(**options)
+      @options = { response_type: 'S', match_count: 1, **options }
+      validate!(@options)
+    end
   end
 end
