@@ -1,0 +1,17 @@
+._*
+.bundle
+.DS_Store
+.rvmrc
+.ruby-version
+.ruby-gemset
+.pow*
+
+*.rdb
+*.gem
+*.swp
+database.yml
+application.yml
+
+tmp/*
+log/*
+coverage/*

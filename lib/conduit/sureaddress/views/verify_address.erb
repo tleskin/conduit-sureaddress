@@ -1,0 +1,22 @@
+<ClientNumber><%= client_number %></ClientNumber>
+<BusinessUnit><%= business_unit %></BusinessUnit>
+<ValidationKey><%= validation_key %></ValidationKey>
+<ClientTracking><%= client_tracking %></ClientTracking>
+<PrimaryAddressLine><%= primary_address_line %></PrimaryAddressLine>
+<SecondaryAddressLine><%= secondary_address_line %></SecondaryAddressLine>
+<% if urbanization.nil? || urbanization.blank? %>
+<Urbanization/>
+<% else %>
+<Urbanization><%= urbanization %><Urbanization/>
+<% end %>
+<City><%= city %></City>
+<% unless county.nil? || county.blank? %>
+<County><%= county %></County>
+<% end %>
+<State><%= state %></State>
+<ZIPCode><%= zip_code %></ZIPCode>
+<% unless zip_plus_4.nil? || zip_plus_4.blank? %>
+<ZIPPlus4><%= zip_plus_4 %></ZIPPlus4>
+<% end %>
+<MatchCount><%= match_count %></MatchCount>
+<ResponseType><%= response_type %></ResponseType>
