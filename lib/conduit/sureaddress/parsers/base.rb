@@ -36,8 +36,10 @@ module Conduit::Driver::Sureaddress
       # => [{"code"=>nil, "message"=>"Unable to locate telephone by MDN"}]
       #
       def response_errors
+        return if response_status == 'success'
+
         if response_content?
-          string_path('/AddressResponse/Message/text()')
+          { error: string_path('/AddressResponse/Message/text()') }
         else
           { error: 'Unexpected response from server.' }
         end

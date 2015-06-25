@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    conduit-sureaddress (0.0.1.pre1)
+    conduit-sureaddress (0.0.1.pre18)
       conduit (~> 0.6.0)
 
 GEM
@@ -43,12 +43,12 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.0)
-    aws-sdk (2.1.1)
-      aws-sdk-resources (= 2.1.1)
-    aws-sdk-core (2.1.1)
+    aws-sdk (2.1.2)
+      aws-sdk-resources (= 2.1.2)
+    aws-sdk-core (2.1.2)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.1.1)
-      aws-sdk-core (= 2.1.1)
+    aws-sdk-resources (2.1.2)
+      aws-sdk-core (= 2.1.2)
     builder (3.2.2)
     conduit (0.6.2)
       activesupport

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<string xmlns="http://sureaddress.net/">&lt;?xml version="1.0"?&gt;
+&lt;AddressResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ClientNumber&gt;000000378&lt;/ClientNumber&gt;
+  &lt;BusinessUnit /&gt;
+  &lt;ClientTracking /&gt;
+  &lt;ReturnCode&gt;100&lt;/ReturnCode&gt;
+  &lt;Score&gt;1&lt;/Score&gt;
+  &lt;FirmName /&gt;
+  &lt;PrimaryAddressLine&gt;207 S STAGHORN LN&lt;/PrimaryAddressLine&gt;
+  &lt;City&gt;GREER&lt;/City&gt;
+  &lt;County&gt;GREENVILLE&lt;/County&gt;
+  &lt;State&gt;SC&lt;/State&gt;
+  &lt;ZIPCode&gt;29650&lt;/ZIPCode&gt;
+  &lt;ZIPPlus4&gt;4065&lt;/ZIPPlus4&gt;
+  &lt;Latitude&gt;34.911469&lt;/Latitude&gt;
+  &lt;Longitude&gt;-82.251780&lt;/Longitude&gt;
+  &lt;TimeZone&gt;-5&lt;/TimeZone&gt;
+  &lt;DayLightSaving&gt;true&lt;/DayLightSaving&gt;
+  &lt;IsMatchLimitExceed&gt;true&lt;/IsMatchLimitExceed&gt;
+  &lt;ResultList /&gt;
+  &lt;GeoCode&gt;US4504500000&lt;/GeoCode&gt;
+  &lt;TopMatchUnique&gt;true&lt;/TopMatchUnique&gt;
+&lt;/AddressResponse&gt;</string>
+

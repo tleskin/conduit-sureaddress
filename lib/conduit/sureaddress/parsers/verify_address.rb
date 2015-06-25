@@ -1,4 +1,5 @@
 require 'conduit/sureaddress/parsers/base'
+require 'bigdecimal'
 
 module Conduit::Driver::Sureaddress
   class VerifyAddress::Parser < Parser::Base
@@ -54,27 +55,27 @@ module Conduit::Driver::Sureaddress
       string_path('/AddressResponse/ZIPPlus4/text()')
     end
 
-    attribute :latitiude do
-      string_path('/AddressResponse/Latitude/text()')
+    attribute :latitude do
+      BigDecimal.new(string_path('/AddressResponse/Latitude/text()'))
     end
 
     attribute :longitude do
-      string_path('/AddressResponse/Longitude/text()')
+      BigDecimal.new(string_path('/AddressResponse/Longitude/text()'))
     end
 
     attribute :time_zone do
-      string_path('/AddressResponse/TimeZone/text()')
+      string_path('/AddressResponse/TimeZone/text()').to_i
     end
 
-    attribute :daylight_saving do
-      string_path('/AddressResponse/DayLightSaving/text()')
+    attribute :daylight_saving? do
+      string_path('/AddressResponse/DayLightSaving/text()') == 'true'
     end
 
     attribute :match_limit_exceeded? do
       string_path('/AddressResponse/IsMatchLimitExceed/text()') == 'true'
     end
 
-    attribute :geo_code do
+    attribute :geocode do
       string_path('/AddressResponse/GeoCode/text()')
     end
 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<string xmlns="http://sureaddress.net/">&lt;?xml version="1.0"?&gt;
+&lt;AddressResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ClientNumber&gt;000000378&lt;/ClientNumber&gt;
+  &lt;BusinessUnit /&gt;
+  &lt;ClientTracking /&gt;
+  &lt;ReturnCode&gt;3&lt;/ReturnCode&gt;
+  &lt;Score&gt;0&lt;/Score&gt;
+  &lt;Message&gt;No match found&lt;/Message&gt;
+  &lt;Latitude&gt;0&lt;/Latitude&gt;
+  &lt;Longitude&gt;0&lt;/Longitude&gt;
+  &lt;TimeZone&gt;0&lt;/TimeZone&gt;
+  &lt;DayLightSaving&gt;false&lt;/DayLightSaving&gt;
+  &lt;IsMatchLimitExceed&gt;false&lt;/IsMatchLimitExceed&gt;
+  &lt;ResultList /&gt;
+  &lt;TopMatchUnique&gt;false&lt;/TopMatchUnique&gt;
+&lt;/AddressResponse&gt;</string>
