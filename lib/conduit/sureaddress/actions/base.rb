@@ -4,8 +4,6 @@ module Conduit::Driver::Sureaddress
   class Base < Conduit::Core::Action
     extend Forwardable
 
-    Excon.defaults[:headers]['Content-Type'] = 'application/xml'
-
     def_delegators :'self.class', :http_method, :url_route
 
     class << self
@@ -63,14 +61,22 @@ module Conduit::Driver::Sureaddress
     end
 
     def perform_request
-      response = request(body: URI.escape("request=#{view}"),
-                         method: http_method,
-                         headers: {'Content-Type' => 'application/x-www-form-urlencoded'} )
+      response = request(body: request_body, method: http_method, headers: http_headers)
       parser   = parser_class.new(response.body, response.status)
       Conduit::ApiResponse.new(raw_response: response, parser: parser)
     end
 
     private
+
+    def http_headers
+      {
+        'Content-Type' => 'application/x-www-form-urlencoded'
+      }
+    end
+
+    def request_body
+      URI.escape("request=#{view}")
+    end
 
     def action_name
       ActiveSupport::Inflector.demodulize(self.class)
