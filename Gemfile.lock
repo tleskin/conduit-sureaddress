@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    conduit-sureaddress (0.0.2)
+    conduit-sureaddress (0.0.3)
       conduit (~> 0.6.0)
 
 GEM
@@ -141,6 +141,3 @@ DEPENDENCIES
   rspec
   rspec-its
   shoulda-matchers
-
-BUNDLED WITH
-   1.10.5
