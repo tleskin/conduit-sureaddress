@@ -11,7 +11,7 @@ module Conduit::Driver::Sureaddress
       attr_accessor :xml
 
       def initialize(xml, http_status = nil)
-        unescaped_xml = CGI.unescapeHTML(xml)
+        unescaped_xml = CGI.unescapeHTML(URI.unescape(xml))
         @xml = Nokogiri::XML(unescaped_xml).css('string AddressResponse').to_s
         @http_status = http_status || 200
       end
