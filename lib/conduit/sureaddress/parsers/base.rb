@@ -8,7 +8,7 @@ module Conduit::Driver::Sureaddress
     # content.  Subclasses must address
     # parsing of specific attributes.
     class Base < Conduit::Core::Parser
-      attr_accessor :xml
+      attr_accessor :xml, :http_status
 
       def initialize(xml, http_status = nil)
         unescaped_xml = CGI.unescapeHTML(URI.unescape(xml))

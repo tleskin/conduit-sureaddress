@@ -12,17 +12,21 @@ module Conduit::Sureaddress::RequestMocker
     end
 
     def mock
+      @defaults_mock = Excon.defaults[:mock] || false
       Excon.defaults[:mock] = true
-      Excon.stub({}, {:body => response})
+      @stub = Excon.stub({}, {:body => response})
     end
 
     def unmock
-      Excon.stubs.clear
-      Excon.defaults[:mock] = false
+      Excon.defaults[:mock] = @defaults_mock
+      Excon.stubs.delete @stub
     end
 
     def with_mocking
-      mock and yield.tap { unmock }
+      mock
+      res = yield
+      unmock
+      res
     end
 
     private
